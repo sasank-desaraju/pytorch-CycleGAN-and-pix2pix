@@ -1,3 +1,5 @@
+*.zip
+*.pth
 .DS_Store
 debug*
 datasets/

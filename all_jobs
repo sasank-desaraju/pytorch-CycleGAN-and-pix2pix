@@ -1,0 +1,4 @@
+./train_high.sh
+./test_high.sh
+./train_low.sh
+./test_low.sh
