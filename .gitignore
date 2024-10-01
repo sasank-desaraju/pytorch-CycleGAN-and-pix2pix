@@ -1,3 +1,5 @@
+slurm/logs/*
+
 *.zip
 *.pth
 .DS_Store
