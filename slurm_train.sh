@@ -33,10 +33,10 @@ echo "PATH is "
 echo PATH $PATH /$PATH
 
 python train.py \
-  --dataroot datasets/9-23/ \
-  --name 9-25_lambda10 \
+  --dataroot datasets/10-01/ \
+  --name 10-01_lambda10 \
   --model pix2pix \
-  --direction AtoB
+  --direction AtoB \
   --gpu_ids 0,1,2,3 \
   --lambda_L1 10.0
   # --output_nc 1 \ # I would need to cast all the images to grayscale first
