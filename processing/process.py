@@ -20,29 +20,33 @@ from PIL import Image
 # setupModel(INFO_CSV, DOSE, TIME, RAW_IMAGE_DIR, MODEL_NAME)
 # setupModel('Dose and Dissection Timepoint for AI.csv', -1, -1, 'Raw Images/', 'BothDose_9_30')
 
-MODEL_NAME = "SSA_LowDose_Holdout"
-DOSE = 0
+MODEL_NAME = "2024_11_24_Older_BothDose"
+DOSE = -1
 TIME = -1
-INFO_CSV = "Dose and Dissection Timepoint for AI.csv"
-RAW_IMAGE_DIR = "Raw Images/"
+INFO_CSV = "/blue/azarrinpar/ICG_AI/Dose and Dissection Timepoint for AI.csv"
+# RAW_IMAGE_DIR = "Images/"
 IMAGE_RESAMPLE_SIZE = (
     460,
     360,
 )  # Our ICG images are WxH=460x360 but we want to resize them to 640x360 for the Madani collaboration
 # We will use PIL.Image.resize() to resize the images to this size
 
-# ? Do these actually get used?
-OUTPUT_DIR = "~/UFL Dropbox/Sasank Desaraju/ICG Study/data/"
+# ? Do these actually get used? OUTPUT_DIR is used in makeCSV, but this does not get called in the main function.
+# OUTPUT_DIR = "~/UFL Dropbox/Sasank Desaraju/ICG Study/data/"
 # OUTPUT_DIR = "/mnt/Linux-Storage/Dropbox (UFL)/ICG Study/data/"
-CSV_NAME = "ssa_data"
-RAW_IMAGE_DIR = "Raw Images/"
-PROC_IMAGE_DIR = "~/UFL Dropbox/Sasank Desaraju/ICG Study/Images/"
+CSV_NAME = "2024_11_24_older_both_dose"
+RAW_IMAGE_DIR = "Images/"
+PROC_IMAGE_DIR = "/blue/azarrinpar/ICG_AI/pytorch-CycleGAN-and-pix2pix/img_src/2024_11_24/Images/"
+# PROC_IMAGE_DIR = "/blue/azarrinpar/ICG_AI/Proc_Images/"
 # PROC_IMAGE_DIR = "/mnt/Linux-Storage/Dropbox (UFL)/ICG Study/Images/"
-VIS_DIR = "~/UFL Dropbox/Sasank Desaraju/ICG Study/vis/"
+VIS_DIR = "/blue/azarrinpar/ICG_AI/pytorch-CycleGAN-and-pix2pix/img_src/2024_11_24/vis/"
+# VIS_DIR = "~/UFL Dropbox/Sasank Desaraju/ICG Study/vis/"
 # VIS_DIR = "/mnt/Linux-Storage/Dropbox (UFL)/ICG Study/vis/"
-ICG_DIR = "~/UFL Dropbox/Sasank Desaraju/ICG Study/icg/"
+ICG_DIR = "/blue/azarrinpar/ICG_AI/pytorch-CycleGAN-and-pix2pix/img_src/2024_11_24/icg/"
+# ICG_DIR = "~/UFL Dropbox/Sasank Desaraju/ICG Study/icg/"
 # ICG_DIR = "/mnt/Linux-Storage/Dropbox (UFL)/ICG Study/icg/"
-IMAGE_DIR = "~/UFL Dropbox/Sasank Desaraju/ICG Study/Images/"
+# IMAGE_DIR = "~/UFL Dropbox/Sasank Desaraju/ICG Study/Images/"
+IMAGE_DIR = "/blue/azarrinpar/ICG_AI/pytorch-CycleGAN-and-pix2pix/img_src/2024_11_24/Images/"
 # IMAGE_DIR = "/mnt/Linux-Storage/Dropbox (UFL)/ICG Study/Images/"
 
 # Read image

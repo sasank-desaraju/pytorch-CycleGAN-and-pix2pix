@@ -2,6 +2,20 @@
 
 ### by Sasank Desaraju
 
+## Data Wrangling
+
+Stage 1: raw image format to pytorch-CycleGAN-and-pix2pix/img_src/[dataset name e.g. date]/ with vis/ and icg/ subdirectories with paired image names
+- Maybe also a info.txt that has info about the dataset
+- This must be implemented differently for each raw data modality (e.g. screenshots, full videos)
+- For screenshots, this is implemented in ICG Study/Code/process.py
+- For full videos, this is implemented in ___
+
+Stage 2: pytorch-CycleGAN-and-pix2pix/img_src/[dataset name] to P2P dataset
+- This should be the same for screenshots, full videos, etc.
+- This is implemented in ICG Study/Code/prepDataset.py
+
+Stage 3: Edit and run combine_A_and_B.sh
+
 ## Model Training
 
 * Place all the raw images in Raw Images

@@ -9,7 +9,7 @@
 #SBATCH --mem=32gb
 #SBATCH --time=72:00:00
 #SBATCH --partition=gpu
-#SBATCH --gres=gpu:a100:4
+#SBATCH --gres=gpu:a100:1
 #SBATCH --account=prismap-ai-core
 #SBATCH --qos=prismap-ai-core
 echo "Date      = $(date)"
@@ -33,12 +33,12 @@ echo "PATH is "
 echo PATH $PATH /$PATH
 
 python train.py \
-  --dataroot datasets/10-01/ \
-  --name 10-01_lambda10 \
+  --dataroot datasets/2024_11_24_Older_BothDose/ \
+  --name 2024_11_24_Older_BothDose \
   --model pix2pix \
   --direction AtoB \
-  --gpu_ids 0,1,2,3 \
-  --lambda_L1 10.0
+  --gpu_ids 0
+  # --lambda_L1 10.0
   # --output_nc 1 \ # I would need to cast all the images to grayscale first
 
 
